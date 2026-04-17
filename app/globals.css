@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+html[data-scroll-behavior="smooth"] {
+  scroll-behavior: smooth;
+}
+
+@theme {
+  --color-brand: var(--color-gray-50);
+  --color-brand-dark: var(--color-gray-200);
+  --color-brand-darker: var(--color-gray-900);
+}
