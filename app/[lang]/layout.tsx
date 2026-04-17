@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "../globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { ContentProvider } from "@/components/ContentProvider";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -26,10 +29,19 @@ export default async function RootLayout({
   return (
     <html
       lang={lang}
-      className={`${roboto.variable} h-full antialiased`}
+      className={`${roboto.variable} antialiased`}
+      data-scroll-behaviour="smooth"
     >
       <body>
-        {children}
+        <ContentProvider lang={lang}>
+          <Header />
+
+          <div>
+            {children}
+          </div>
+
+          <Footer />
+        </ContentProvider>
       </body>
     </html>
   );
