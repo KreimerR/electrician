@@ -1,17 +1,17 @@
 "use client"
 
-import Link from "next/link";
-import { useContentContext } from "./ContentProvider";
+import { useDataContext } from "./DataProvider";
+import { scrollToSection } from "@/helper";
 
 export default function ContactButton() {
-  const content = useContentContext()
+  const data = useDataContext()
 
   return (
-    <Link
-      href="#contact"
-      className="py-2 px-4 bg-brand text-lg text-center text-brand-darker font-[600] rounded-2xl transition-all hover:cursor-pointer hover:bg-brand-dark"
+    <button
+      onClick={() => scrollToSection("contact")}
+      className="py-2 px-4 bg-brand-white text-lg text-center text-brand-black font-[600] rounded-2xl transition-all hover:cursor-pointer hover:bg-brand-white-darker"
     >
-      {content.button}
-    </Link>
+      {data.content.button}
+    </button>
   )
 }
