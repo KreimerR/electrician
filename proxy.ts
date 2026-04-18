@@ -5,7 +5,7 @@ const PUBLIC_FILE = /\.(.*)$/
 const SUPPORTED_LANGS = ["en", "he", "ru"]
 const DEFAULT_LANG = "en"
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
 
   if (
