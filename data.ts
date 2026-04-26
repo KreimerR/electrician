@@ -1,3 +1,12 @@
+import wholeHomeWiringAndRewiringImage from "@/public/services/whole-home-wiring-and-rewiring-image.jpg"
+import lightingInstallationAndDesignImage from "@/public/services/lighting-installation-and-design-image.jpg"
+import electricalRepairsAndTroubleshootingImage from "@/public/services/electrical-repairs-and-troubleshooting-image.jpg"
+import chargerEVInstallationImage from "@/public/services/charger-ev-installation-image.jpg"
+import generatorAndBackupPowerSystemsImage from "@/public/services/generator-and-backup-power-systems-image.jpg"
+import smartHomeAutomationAndSecurityImage from "@/public/services/smart-home-automation-and-security-image.jpg"
+import solarPanelAndPhotovoltaicSystemIntegrationImage from "@/public/services/solar-panel-and-photovoltaic-system-integration-image.jpg"
+import outdoorAndLandscapeLightingInstallationImage from "@/public/services/outdoor-and-landscape-lighting-installation-image.jpg"
+
 export const data = {
   en: {
     logo: "Electrician",
@@ -40,8 +49,58 @@ export const data = {
       "Same-Day Service",
       "Transparent & Fair Pricing",
       "Clean Work",
-      "2-Year Workmanship Warranty",
+      "2-Year Warranty",
     ],
+    services: {
+      h1: "Reliable Electrical Solutions for Your Home",
+      serviceCards: [
+        {
+          icon: wholeHomeWiringAndRewiringImage,
+          title: "Whole-Home Wiring & Rewiring",
+        },
+        {
+          icon: lightingInstallationAndDesignImage,
+          title: "Lighting Installation & Design",
+        },
+        {
+          icon: electricalRepairsAndTroubleshootingImage,
+          title: "Electrical Repairs & Troubleshooting",
+        },
+        {
+          icon: chargerEVInstallationImage,
+          title: "EV Charger Installation",
+        },
+        {
+          icon: generatorAndBackupPowerSystemsImage,
+          title: "Generator & Backup Power Systems",
+        },
+        {
+          icon: smartHomeAutomationAndSecurityImage,
+          title: "Smart Home Automation & Security",
+        },
+        {
+          icon: solarPanelAndPhotovoltaicSystemIntegrationImage,
+          title: "Solar Panel & Photovoltaic System Integration",
+        },
+        {
+          icon: outdoorAndLandscapeLightingInstallationImage,
+          title: "Outdoor & Landscape Lighting Installation",
+        },
+      ],
+    },
+    contact: {
+      h1: "Ready for Reliable Power? Let’s Talk!",
+      form: {
+        label: "Write me an email",
+        name: "Name",
+        email: "Email",
+        message: "Message",
+        submit: "Submit",
+      },
+      callTitle: "Call me",
+      callPhone: "+972 50 123 45 67",
+    },
+    footer: "Electrician. All Rights Reserved.",
   },
   he: {
     logo: "חשמלאי",
@@ -86,6 +145,56 @@ export const data = {
       "עבודה נקייה",
       "אחריות 2 שנים על העבודה",
     ],
+    services: {
+      h1: "פתרונות חשמל אמינים לבית שלכם",
+      serviceCards: [
+        {
+          icon: wholeHomeWiringAndRewiringImage,
+          title: "חיווט ושחזור חיווט לכל הבית",
+        },
+        {
+          icon: lightingInstallationAndDesignImage,
+          title: "התקנת תאורה ועיצוב",
+        },
+        {
+          icon: electricalRepairsAndTroubleshootingImage,
+          title: "תיקונים חשמליים ואיתור תקלות",
+        },
+        {
+          icon: chargerEVInstallationImage,
+          title: "התקנת עמדות טעינה לרכבים חשמליים",
+        },
+        {
+          icon: generatorAndBackupPowerSystemsImage,
+          title: "גנרטורים ומערכות גיבוי חשמל",
+        },
+        {
+          icon: smartHomeAutomationAndSecurityImage,
+          title: "אוטומציה ביתית חכמה ואבטחה",
+        },
+        {
+          icon: solarPanelAndPhotovoltaicSystemIntegrationImage,
+          title: "התקנת פאנלים סולאריים ומערכות פוטו-וולטאיות",
+        },
+        {
+          icon: outdoorAndLandscapeLightingInstallationImage,
+          title: "התקנת תאורת חוץ וגינה",
+        },
+      ],
+    },
+    contact: {
+      h1: "מוכנים לחשמל אמין? בואו נדבר",
+      form: {
+        label: "תכתוב לי בדוא''ל",
+        name: "שם",
+        email: "אימייל",
+        message: "הודעה",
+        submit: "שלח",
+      },
+      callTitle: "תתקשר אליי",
+      callPhone: "+972 50 123 45 67",
+    },
+    footer: "חשמלאי. כל הזכויות שמורות",
   },
   ru: {
     logo: "Электрик",
@@ -107,15 +216,15 @@ export const data = {
         title: "Связаться",
       },
     ],
-    button: "Свяжись со мной",
+    button: "Свяжитесь со мной",
     hero: {
       h1: "Электроснабжая ваш дом с безопасностью и точностью",
       h2: "Лицензированный • Застрахованный • Быстрый выезд по центру",
-      button: "Свяжись со мной",
+      button: "Свяжитесь со мной",
     },
     firstInfo: [
       "15+ лет опыта",
-      "Лицензированный и застрахованный",
+      "Лицензированный",
       "Локальный бизнес",
       "24/7 экстренные услуги",
     ],
@@ -125,10 +234,60 @@ export const data = {
       h3: "Мы относимся к каждому дому как к своему",
     },
     secondInfo: [
-      "Выезд в день обращения и аварийный",
+      "Выезд в день обращения",
       "Прозрачные цены",
       "Чистая работа",
       "Гарантия 2 года",
     ],
+    services: {
+      h1: "Надёжные электрические решения для вашего дома",
+      serviceCards: [
+        {
+          icon: wholeHomeWiringAndRewiringImage,
+          title: "Полная электропроводка дома",
+        },
+        {
+          icon: lightingInstallationAndDesignImage,
+          title: "Установка и дизайн освещения",
+        },
+        {
+          icon: electricalRepairsAndTroubleshootingImage,
+          title: "Ремонт электрики и поиск неисправностей",
+        },
+        {
+          icon: chargerEVInstallationImage,
+          title: "Установка зарядных станций для электромобилей",
+        },
+        {
+          icon: generatorAndBackupPowerSystemsImage,
+          title: "Генераторы и системы резервного питания",
+        },
+        {
+          icon: smartHomeAutomationAndSecurityImage,
+          title: "Умный дом и системы безопасности",
+        },
+        {
+          icon: solarPanelAndPhotovoltaicSystemIntegrationImage,
+          title: "Установка солнечных панелей",
+        },
+        {
+          icon: outdoorAndLandscapeLightingInstallationImage,
+          title: "Установка наружного и ландшафтного освещения",
+        },
+      ],
+    },
+    contact: {
+      h1: "Готовы к надёжному электричеству? Давайте поговорим!",
+      form: {
+        label: "Напишите мне электронное письмо",
+        name: "Имя",
+        email: "Электронная почта",
+        message: "Сообщение",
+        submit: "Отправить",
+      },
+      callTitle: "Позвоните мне",
+      callPhone: "+972 50 123 45 67",
+    },
+    footer: "Электрик. Все права защищены.",
   },
 }
