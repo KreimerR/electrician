@@ -7,7 +7,7 @@ export default function Nav() {
   const data = useDataContext()
 
   return (
-    <nav className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+    <nav className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden lg:block">
       <ul className="flex items-center gap-5">
         {data.content.nav.map((el: { id: string, title: string }, index: number) =>
           <li key={index}>
