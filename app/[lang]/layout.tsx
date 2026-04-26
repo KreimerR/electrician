@@ -34,11 +34,7 @@ export default async function RootLayout({
       <body>
         <DataProvider lang={lang}>
           <Header />
-
-          <div>
-            {children}
-          </div>
-
+          {children}
           <Footer />
         </DataProvider>
       </body>
