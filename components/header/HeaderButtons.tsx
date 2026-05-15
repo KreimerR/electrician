@@ -1,44 +1,30 @@
 "use client"
 
-import { useDataContext } from "../DataProvider"
-import Link from "next/link"
 import ContactButton from "../ContactButton"
-import { languages } from "@/helper"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
+import { useState } from "react"
+import HeaderLanguages from "./HeaderLanguages"
+import ModalMenu from "./ModalMenu"
 
 export default function HeaderButtons() {
-  const data = useDataContext()
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
 
   return (
-    <div className="flex items-center gap-3">
-      {data.lang === "he" ? (
-        <>
-          <ContactButton />
+    <>
+      <div className="hidden lg:flex items-center gap-3">
+        <HeaderLanguages modal={false} />
+        <ContactButton />
+      </div>
 
-          {languages.map((el: { href: string, title: string }, index: number) =>
-            <Link
-              key={index}
-              href={el.href}
-              className="text-lg text-brand-white font-[600] transition-all hover:text-brand-white-darker"
-            >
-              {el.title}
-            </Link>
-          )}
-        </>
-      ) : (
-        <>
-          {languages.map((el: { href: string, title: string }, index: number) =>
-            <Link
-              key={index}
-              href={el.href}
-              className="text-lg text-brand-white font-[600] transition-all hover:text-brand-white-darker"
-            >
-              {el.title}
-            </Link>
-          )}
+      <button
+        className="block lg:hidden text-2xl text-brand-white drop-shadow-sm transition-all hover:cursor-pointer hover:text-brand-white-darker z-40"
+        onClick={() => setIsMenuOpen((prev: boolean) => !prev)}
+      >
+        <FontAwesomeIcon icon={isMenuOpen ? faXmark : faBars} />
+      </button>
 
-          <ContactButton />
-        </>
-      )}
-    </div>
+      <ModalMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+    </>
   )
 }
