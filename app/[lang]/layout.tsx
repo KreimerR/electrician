@@ -29,7 +29,8 @@ export default async function RootLayout({
   return (
     <html
       lang={lang}
-      className={`${roboto.variable} antialiased`}
+      dir={lang === "he" ? "rtl" : "ltr"}
+      className={`${roboto.variable} antialiased overflow-x-hidden`}
     >
       <body>
         <DataProvider lang={lang}>
