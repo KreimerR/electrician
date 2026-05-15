@@ -1,11 +1,14 @@
-"use client"
-
-import { useDataContext } from "../DataProvider"
-import HebrewAbout from "./HebrewAbout"
-import OtherAbouts from "./OtherAbouts"
+import AboutImages from "./AboutImages"
+import AboutInfo from "./AboutInfo"
 
 export default function About() {
-  const data = useDataContext()
-
-  return data.lang === "he" ? <HebrewAbout /> : <OtherAbouts />
+  return (
+    <section
+      id="about"
+      className="lg:grid lg:grid-cols-[1fr_1fr] items-center h-screen relative"
+    >
+      <AboutImages />
+      <AboutInfo />
+    </section>
+  )
 }
