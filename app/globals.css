@@ -5,3 +5,26 @@
   --color-brand-white-darker: var(--color-gray-200);
   --color-brand-black: var(--color-gray-900);
 }
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-ticker {
+  animation: ticker 35s linear infinite;
+  width: max-content;
+  display: flex;
+  align-items: center;
+}
+
+[data-type="first"] .animate-ticker {
+  animation-duration: 40s;
+}
+[data-type="second"] .animate-ticker {
+  animation-duration: 28s;
+}
