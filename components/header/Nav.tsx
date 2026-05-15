@@ -1,9 +1,10 @@
 "use client"
 
+import { SetStateAction } from "react";
 import { useDataContext } from "../DataProvider";
 import { scrollToSection } from "@/helper";
 
-export default function Nav({ modal, setIsMenuOpen }: { modal: boolean, setIsMenuOpen: any | boolean }) {
+export default function Nav({ modal, setIsMenuOpen }: { modal: boolean, setIsMenuOpen: React.Dispatch<SetStateAction<boolean>> | false }) {
   const data = useDataContext()
 
   const openSection = (el: string) => {

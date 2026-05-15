@@ -1,7 +1,8 @@
+import React, { SetStateAction } from "react"
 import HeaderLanguages from "./HeaderLanguages"
 import Nav from "./Nav"
 
-export default function ModalMenu({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean, setIsMenuOpen: any }) {
+export default function ModalMenu({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean, setIsMenuOpen: React.Dispatch<SetStateAction<boolean>> }) {
   return (
     <>
       {isMenuOpen && <div className="fixed top-0 left-0 w-screen h-screen bg-black opacity-90 z-20" />}
