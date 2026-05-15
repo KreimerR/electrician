@@ -7,13 +7,13 @@ export default function Input({
   type: string,
   placeholder: string,
   lang: "en" | "he" | "ru",
-  element: "input" | "textarea" | "submit"
+  element: "input" | "textarea" | "submit" | string
 }) {
   if (element === "textarea") {
     return (
       <textarea
         placeholder={placeholder}
-        className={`w-full bg-brand-white text-2xl font-[600] text-brand-black p-3 rounded-2xl rounded-br-none ${lang === "he" && "text-right"}`}
+        className={`w-full bg-brand-white text-2xl font-[600] text-brand-black p-3 rounded-2xl ${lang === "he" ? "rounded-bl-none" : "rounded-br-none"}`}
       />
     )
   } else if (element === "input") {
@@ -21,7 +21,7 @@ export default function Input({
       <input
         type={type}
         placeholder={placeholder}
-        className={`w-full bg-brand-white text-2xl font-[600] text-brand-black p-3 rounded-2xl ${lang === "he" && "text-right"}`}
+        className="w-full bg-brand-white text-2xl font-[600] text-brand-black p-3 rounded-2xl"
       />
     )
   } else if (element === "submit") {
