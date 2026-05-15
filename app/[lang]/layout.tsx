@@ -15,25 +15,33 @@ export const metadata: Metadata = {
   description: "Private electrician",
 };
 
+const SUPPORTED_LANGS = ["en", "he", "ru"] as const
+
+type Lang = (typeof SUPPORTED_LANGS)[number]
+
 export default async function RootLayout({
   children,
   params
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ lang: "he" | "en" | "ru" }>
+  params: Promise<{ lang: string }>
 }>) {
   const { lang } = await params
 
-  if (!lang) throw new Error("'lang' has not been received")
+  if (!SUPPORTED_LANGS.includes(lang as Lang)) {
+    throw new Error("Unsupported language")
+  }
+
+  const safeLang = lang as Lang
 
   return (
     <html
-      lang={lang}
-      dir={lang === "he" ? "rtl" : "ltr"}
+      lang={safeLang}
+      dir={safeLang === "he" ? "rtl" : "ltr"}
       className={`${roboto.variable} antialiased overflow-x-hidden`}
     >
       <body>
-        <DataProvider lang={lang}>
+        <DataProvider lang={safeLang}>
           <Header />
           {children}
           <Footer />
