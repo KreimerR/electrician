@@ -1,32 +1,54 @@
 "use client"
 
 import { useDataContext } from "./DataProvider"
+import { useEffect, useRef } from "react"
 
 export default function Info({ type }: { type: "first" | "second" }) {
   const data = useDataContext()
+  const items = type === "first"
+    ? data.content.firstInfo
+    : data.content.secondInfo
 
-  const title = (el: string, index: number) => {
+  const tickerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const ticker = tickerRef.current
+    if (!ticker) return
+
+    const pause = () => ticker.style.animationPlayState = "paused"
+    const play = () => ticker.style.animationPlayState = "running"
+
+    ticker.addEventListener("mouseenter", pause)
+    ticker.addEventListener("mouseleave", play)
+
+    return () => {
+      ticker.removeEventListener("mouseenter", pause)
+      ticker.removeEventListener("mouseleave", play)
+    }
+  }, [])
+
+  const title = (el: string, index: number, count: number) => {
     return (
       <div
-        key={index}
-        className="w-full bg-gray-800 text-center p-2 rounded-2xl"
+        key={`${type}-${count}-${index}`}
+        className="bg-gray-800 text-2xl text-brand-white text-center font-bold px-8 py-3 rounded-2xl"
       >
-        <h3
-          className="text-2xl text-brand-white font-bold"
-        >
-          {el}
-        </h3>
+        {el}
       </div>
     )
   }
 
   return (
-    <section className="2xl:h-[100px] bg-brand-black px-5 py-5 2xl:py-0 2xl:px-10 flex flex-col 2xl:flex-row 2xl:justify-between items-center gap-5">
-      {type === "first" ? (
-        data.content.firstInfo.map((el: string, index: number) => title(el, index))
-      ) : (
-        data.content.secondInfo.map((el: string, index: number) => title(el, index))
-      )}
+    <section
+      className="bg-brand-black py-6 overflow-hidden"
+      dir="ltr"
+    >
+      <div
+        ref={tickerRef}
+        className="flex gap-8 md:gap-12 lg:gap-16 animate-ticker"
+      >
+        {new Array(1, 2, 3, 4).map((number: number) => items.map((el: string, index: number) => title(el, index, number)))}
+      </div>
     </section>
   )
 }
