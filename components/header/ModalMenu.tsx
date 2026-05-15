@@ -8,15 +8,8 @@ export default function ModalMenu({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: b
 
       {isMenuOpen && (
         <div className="fixed top-0 left-0 w-screen h-screen z-30 flex flex-col items-center gap-5 p-5 text-lg text-brand-white font-[600]">
-          <div className="w-full flex flex-col items-center gap-2">
-            <span className="w-full block drop-shadow-sm">Sections:</span>
-            <Nav modal setIsMenuOpen={setIsMenuOpen} />
-          </div>
-
-          <div className="w-full flex flex-col items-center gap-2">
-            <span className="w-full block drop-shadow-sm">Languages:</span>
-            <HeaderLanguages modal />
-          </div>
+          <Nav modal setIsMenuOpen={setIsMenuOpen} />
+          <HeaderLanguages modal />
         </div>
       )}
     </>
