@@ -1,11 +1,11 @@
 import Image, { StaticImageData } from "next/image";
 import { scrollToSection } from "@/helper";
 
-export default function ServiceCard({ icon, title, lang }: { icon: StaticImageData, title: string, lang: "en" | "he" | "ru" }) {
+export default function ServiceCard({ icon, title }: { icon: StaticImageData, title: string }) {
   return (
     <div
       onClick={() => scrollToSection("contact")}
-      className="grid grid-rows-[1fr_1fr] 2xl:w-[300px] relative"
+      className="grid grid-rows-[1fr_1fr] lg:w-[300px] 2xl:w-[300px] relative"
     >
       <Image
         src={icon}
@@ -20,14 +20,7 @@ export default function ServiceCard({ icon, title, lang }: { icon: StaticImageDa
       />
 
       <div className="p-3 bg-brand-white rounded-b-2xl 2xl:h-[130px]">
-        <h3
-          className={`
-            text-2xl text-brand-black font-bold 
-            ${lang === "he" && "text-right"}
-          `}
-        >
-          {title}
-        </h3>
+        <h3 className="text-2xl text-brand-black font-bold">{title}</h3>
       </div>
     </div>
   )
