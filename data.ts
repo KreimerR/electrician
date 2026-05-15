@@ -31,7 +31,7 @@ export const data = {
     button: "Contact me",
     hero: {
       h1: "Powering Your Home with Safety & Precision",
-      h2: "Licensed • Insured • Fast Response in the Center",
+      h2: "Licensed • Insured",
       button: "Contact me",
     },
     firstInfo: [
@@ -56,15 +56,15 @@ export const data = {
       serviceCards: [
         {
           icon: wholeHomeWiringAndRewiringImage,
-          title: "Whole-Home Wiring & Rewiring",
+          title: "Whole-Home Wiring",
         },
         {
           icon: lightingInstallationAndDesignImage,
-          title: "Lighting Installation & Design",
+          title: "Lighting Installation",
         },
         {
           icon: electricalRepairsAndTroubleshootingImage,
-          title: "Electrical Repairs & Troubleshooting",
+          title: "Electrical Repairs",
         },
         {
           icon: chargerEVInstallationImage,
@@ -76,15 +76,15 @@ export const data = {
         },
         {
           icon: smartHomeAutomationAndSecurityImage,
-          title: "Smart Home Automation & Security",
+          title: "Smart Home Automation",
         },
         {
           icon: solarPanelAndPhotovoltaicSystemIntegrationImage,
-          title: "Solar Panel & Photovoltaic System Integration",
+          title: "Solar Panel Integration",
         },
         {
           icon: outdoorAndLandscapeLightingInstallationImage,
-          title: "Outdoor & Landscape Lighting Installation",
+          title: "Outdoor Lighting Installation",
         },
       ],
     },
@@ -125,7 +125,7 @@ export const data = {
     button: "תתקשר אליי",
     hero: {
       h1: "מחשמלים את הבית שלכם בבטיחות ובדיוק",
-      h2: "מורשה • מבוטח • מענה מהיר במרכז הארץ",
+      h2: "מורשה • מבוטח",
       button: "תתקשר אליי",
     },
     firstInfo: [
@@ -170,11 +170,11 @@ export const data = {
         },
         {
           icon: smartHomeAutomationAndSecurityImage,
-          title: "אוטומציה ביתית חכמה ואבטחה",
+          title: "אוטומציה ביתית חכמה",
         },
         {
           icon: solarPanelAndPhotovoltaicSystemIntegrationImage,
-          title: "התקנת פאנלים סולאריים ומערכות פוטו-וולטאיות",
+          title: "התקנת פאנלים סולאריים",
         },
         {
           icon: outdoorAndLandscapeLightingInstallationImage,
@@ -187,7 +187,7 @@ export const data = {
       form: {
         label: "תכתוב לי בדוא''ל",
         name: "שם",
-        email: "אימייל",
+        email: "דוא''ל",
         message: "הודעה",
         submit: "שלח",
       },
@@ -219,7 +219,7 @@ export const data = {
     button: "Свяжитесь со мной",
     hero: {
       h1: "Электроснабжая ваш дом с безопасностью и точностью",
-      h2: "Лицензированный • Застрахованный • Быстрый выезд по центру",
+      h2: "Лицензированный • Застрахованный",
       button: "Свяжитесь со мной",
     },
     firstInfo: [
@@ -252,11 +252,11 @@ export const data = {
         },
         {
           icon: electricalRepairsAndTroubleshootingImage,
-          title: "Ремонт электрики и поиск неисправностей",
+          title: "Ремонт электрики",
         },
         {
           icon: chargerEVInstallationImage,
-          title: "Установка зарядных станций для электромобилей",
+          title: "Установка зарядных станций для машин",
         },
         {
           icon: generatorAndBackupPowerSystemsImage,
@@ -272,7 +272,7 @@ export const data = {
         },
         {
           icon: outdoorAndLandscapeLightingInstallationImage,
-          title: "Установка наружного и ландшафтного освещения",
+          title: "Установка наружного освещения",
         },
       ],
     },
