@@ -3,9 +3,12 @@
 import { createContext, useContext, ReactNode } from "react"
 import { data } from "@/data"
 
-const DataContext = createContext<any | null>(null)
+const DataContext = createContext<{
+  content: typeof data.he | typeof data.en | typeof data.ru
+  lang: "en" | "he" | "ru"
+} | null>(null)
 
-export function DataProvider({ children, lang }: { children: ReactNode, lang: string }) {
+export function DataProvider({ children, lang }: { children: ReactNode, lang: "en" | "he" | "ru" }) {
   const content = data[lang as keyof typeof data]
 
   return (
